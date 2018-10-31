@@ -3,7 +3,7 @@ MAINTAINER imsi
 LABEL purpose="Hands on Lab"
 RUN apt-get update
 RUN apt-get install apache2 -y
-WORDIR /var/www/html
-RUN ["bin/bash". "-c", "echo welcome to docker auto-build!! >> test.html"]
+WORKDIR /var/www/html
+RUN ["/bin/bash". "-c", "echo welcome to docker auto-build!! >> test.html"]
 EXPOSE 80
-CMS ["apachectl", "DFOREGROUNT"]
+CMS ["apachectl", "DFOREGROUND"]
